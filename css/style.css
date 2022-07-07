@@ -1,0 +1,44 @@
+
+.one, .three{
+  min-height: 50px;
+}
+.two{
+  min-height: 600px;
+}
+.wrapper {
+  height: 600px;
+}
+.emitter {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #ff5722;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #ff5722;
+  opacity: 0;
+  z-index: -1;
+}
+.wave {
+  animation: sonarWave 2s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
